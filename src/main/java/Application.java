@@ -10,7 +10,7 @@ public class Application  {
     public static void main(String[] args) {
         Application myapp = new Application();
         System.out.print("App was started. Enter '--stop' to exit.\n");
-        System.out.print("Enter name and message or --all...\n");
+        System.out.print("Enter name and message or --all...\n\n");
         myapp.mainLoop();
     }
 
@@ -26,9 +26,8 @@ public class Application  {
         }else{
             try {
                 sqlcom = com.split(" ");
-                //System.out.printf(sqlcom[0] + "!!!!" + sqlcom[1]);
                 mydb.add(sqlcom[0] , sqlcom[1]);
-                System.out.printf("Enter name and message or --all...");
+                System.out.printf("Enter name and message or --all...\n\n");
             } finally {
                 mainLoop();
             }
